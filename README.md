@@ -2,7 +2,7 @@
 
 Multivariate Time Series Anomaly Detection based on Pre-trained Models with Dual-Attention Mechanism 
 
-<div align="center"><img src=images/dualLMAD_structure.png width=60% /></div> 
+<div align="center"><img src=images/dualLMAD_overview.png width=50% /></div> 
 
 ## Get Start 
 
