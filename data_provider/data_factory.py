@@ -1,5 +1,5 @@
 from data_provider.data_loader import  PSMSegLoader, \
-    MSLSegLoader, SMAPSegLoader, SMDSegLoader, SWATSegLoader, UEAloader, YiDongLoader , SMDMaskSegLoader,
+    MSLSegLoader, SMAPSegLoader, SMDSegLoader, SWATSegLoader, YiDongLoader , SMDMaskSegLoader,
 from data_provider.uea import collate_fn
 from torch.utils.data import DataLoader
 
