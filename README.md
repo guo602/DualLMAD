@@ -2,7 +2,7 @@
 
 Multivariate Time Series Anomaly Detection based on Pre-trained Models with Dual-Attention Mechanism 
 
-<div align="center"><img src=images/dualLMAD_overview.png width=50% /></div> 
+<div align="center"><img src=images/model_overview.png width=50% /></div> 
 
 ## Get Start 
 
@@ -17,7 +17,7 @@ pip install -r requirements.txt
 **Get data**
 
 
-You can obtain the well pre-processed datasets from [[Google Drive]](https://drive.google.com/drive/folders/1KOQvV2nR6Y9tIkB4XELHA1CaV1F8LrZ6
+You can obtain the SMD, SMAP, MSL datasets from [[Google Drive]](https://drive.google.com/drive/folders/1KOQvV2nR6Y9tIkB4XELHA1CaV1F8LrZ6
 )
 
 

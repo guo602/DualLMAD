@@ -1,11 +1,7 @@
 import argparse
 import os
 import torch
-# from exp.exp_long_term_forecasting import Exp_Long_Term_Forecast
-# from exp.exp_imputation import Exp_Imputation
-# from exp.exp_short_term_forecasting import Exp_Short_Term_Forecast
 from exp.exp_anomaly_detection import Exp_Anomaly_Detection
-# from exp.exp_classification import Exp_Classification
 import random
 import numpy as np
 from torch.utils.tensorboard import SummaryWriter
@@ -128,18 +124,11 @@ if args.use_gpu and args.use_multi_gpu:
 print('Args in experiment:')
 print(args)
 
-if args.task_name == 'long_term_forecast':
-    Exp = Exp_Long_Term_Forecast
-elif args.task_name == 'short_term_forecast':
-    Exp = Exp_Short_Term_Forecast
-elif args.task_name == 'imputation':
-    Exp = Exp_Imputation
-elif args.task_name == 'anomaly_detection':
+if  args.task_name == 'anomaly_detection':
     Exp = Exp_Anomaly_Detection
-elif args.task_name == 'classification':
-    Exp = Exp_Classification
 else:
-    Exp = Exp_Long_Term_Forecast
+    print("Undefine task")
+    
 
 if args.is_training:
     for ii in range(args.itr):
@@ -187,30 +176,4 @@ if args.is_training:
         print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
         exp.test(setting)
         torch.cuda.empty_cache()
-# else:
-#     ii = 0
-#     setting = '{}_{}_{}_{}_epoch{}_ft{}_sl{}_ll{}_pl{}_dm{}_nh{}_el{}_dl{}_df{}_fc{}_eb{}_dt{}_batch{}_{}_{}'.format(
-#         args.task_name,
-#         args.model_id,
-#         args.model,
-#         args.data,
-#         args.train_epochs,
-#         args.features,
-#         args.seq_len,
-#         args.label_len,
-#         args.pred_len,
-#         args.d_model,
-#         args.n_heads,
-#         args.e_layers,
-#         args.d_layers,
-#         args.d_ff,
-#         args.factor,
-#         args.embed,
-#         args.batch_size,
-#         args.distil,
-#         args.des, ii)
 
-#     exp = Exp(args)  # set experiments
-#     print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
-#     # exp.test(setting, test=1)
-#     torch.cuda.empty_cache()

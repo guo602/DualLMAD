@@ -1,29 +1,13 @@
 import os
 import torch
-# from models import Autoformer, Transformer, TimesNet, Nonstationary_Transformer, DLinear, FEDformer, \
-#     Informer, LightTS, Reformer, ETSformer, Pyraformer, PatchTST, MICN
-from models import dualLMAD,dualLMAD_v2
+from DualLMAD.models import dualLMAD
 
 
 class Exp_Basic(object):
     def __init__(self, args):
         self.args = args
         self.model_dict = {
-            # 'TimesNet': TimesNet,
-            # 'Autoformer': Autoformer,
-            # 'Transformer': Transformer,
-            # 'Nonstationary_Transformer': Nonstationary_Transformer,
-            # 'DLinear': DLinear,
-            # 'FEDformer': FEDformer,
-            # 'Informer': Informer,
-            # 'LightTS': LightTS,
-            # 'Reformer': Reformer,
-            # 'ETSformer': ETSformer,
-            # 'PatchTST': PatchTST,
-            # 'Pyraformer': Pyraformer,
-            # 'MICN': MICN,
             'dualLMAD': dualLMAD,
-            'dualLMAD_v2': dualLMAD_v2,
         }
         self.device = self._acquire_device()
         self.model = self._build_model().to(self.device)
