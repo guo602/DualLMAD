@@ -222,6 +222,6 @@ class Exp_Anomaly_Detection(Exp_Basic):
         label = test_labels.reshape(-1)
         score = np.mean(test_energy,axis = -1).reshape(-1)
         results,_ = get_best_f1_upper(score,label)
-        print(f"f1:{results[0]} p:{results[1]} r:{results[1]}")
+        print(f"f1:{results[0]} p:{results[1]} r:{results[2]}")
 
         
