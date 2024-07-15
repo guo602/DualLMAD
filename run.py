@@ -92,7 +92,7 @@ parser.add_argument('--p_hidden_dims', type=int, nargs='+', default=[128, 128],
                     help='hidden layer dimensions of projector (List)')
 parser.add_argument('--p_hidden_layers', type=int, default=2, help='number of hidden layers in projector')
 
-# patching
+parser.add_argument('--step', type=int, default=100)
 parser.add_argument('--patch_size', type=int, default=1)
 parser.add_argument('--stride', type=int, default=1)
 parser.add_argument('--gpt_layers', type=int, default=6)

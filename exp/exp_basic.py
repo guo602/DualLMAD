@@ -1,6 +1,6 @@
 import os
 import torch
-from DualLMAD.models import dualLMAD
+from models import dualLMAD
 
 
 class Exp_Basic(object):
