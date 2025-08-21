@@ -1,6 +1,6 @@
 # DualLMAD 
 
-Multivariate Time Series Anomaly Detection based on Pre-trained Models with Dual-Attention Mechanism 
+[Multivariate Time Series Anomaly Detection based on Pre-trained Models with Dual-Attention Mechanism](https://ieeexplore.ieee.org/abstract/document/10771272)
 
 <div align="center"><img src=images/model_overview.png width=50% /></div> 
 
